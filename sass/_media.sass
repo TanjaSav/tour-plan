@@ -63,6 +63,40 @@
   .card
     width: 45%
     height: 255px
+  .footer
+    padding: 76px 0 33px 0
+    &-wrapper
+      grid-template-columns: repeat(6, 1fr)
+      grid-gap: 40px
+    &__logo
+      grid-row: 1 / 2
+      grid-column: span 2
+      max-width: 104px
+      max-height: 120px
+    &__social
+      &-network
+        grid-row: 1 / 2
+        grid-column: span 4
+        align-self: center
+    &__categories
+      grid-row: 2 / 3
+      grid-column: span 2
+      margin-bottom: 34px
+    &__legal
+      grid-column: span 2
+    &__additional
+      grid-column: span 2
+    &__contact
+      &-details
+        grid-column: span 5
+        grid-row: 3
+      &-form
+        grid-column: span 5
+        grid-row: 4
+    &__input
+        flex-basis: 48%
+    &__bottom
+      margin-top: 56px
 @media ( max-width: 768px)
   .container
     max-width: 576px
@@ -152,9 +186,16 @@
   .card 
     width: 49%
     height: 255px
-@media ( max-width: 550px)
+  .footer
+    &__contact
+      &-details
+        grid-column: span 6
+      &-form
+        grid-column: span 6
+@media ( max-width: 576px)
   .container
-    width: 87.5%
+    width: 85.5%
+    min-width: 267px
   .logo
     width: 99px
   .hotel
@@ -179,6 +220,71 @@
       line-height: 23px   
   .card
     width: 100%
+  .footer
+    padding: 69px 0 21px 0
+    &-wrapper
+      grid-template-columns: 1fr
+    &__logo
+      grid-row: 1
+      grid-column: 1
+    &__social
+      &-network
+        flex-wrap: wrap
+        grid-row: 2
+        grid-column: 1
+    &__title
+      &--inline
+        flex-basis: 100%
+        margin-bottom: 22px
+    &__additional
+      grid-row: 4
+      grid-column: 1
+    &__categories
+      grid-row: 5
+      grid-column: 1
+      margin-bottom: 0
+    &__legal
+      grid-row: 3
+      grid-column: 1
+      justify-self: start
+    &__contact
+      &-details
+        grid-row: 6
+        grid-column: 1
+      &-form
+        grid-row: 7
+        grid-column: 1
+    &__button
+      order: 5
+    &__info
+      flex-basis: 100%
+      margin-bottom: 15px
+    &__input
+      flex-basis: 100%
+      margin-top: 0px
+    &__bottom
+      flex-basis: 100%
+      margin-top: 30px
+      display: grid
+      grid-template-columns: 1fr
+      &--ul
+        grid-row: 1
+        grid-column: 1
+        width: 100%
+      &--item
+        word-wrap: normal
+        font-size: 12px
+        line-height: 15px
+      &--image
+        margin-top: 15px
+        grid-row: 1
+        grid-column: 2
+        align-self: start
+       
+
+        
+      
+   
 
       
     
