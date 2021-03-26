@@ -416,6 +416,10 @@ template {
   line-height: 18px;
 }
 
+.navbar-menu__item--mobile_visible {
+  display: none;
+}
+
 .logo {
   width: 177px;
 }
@@ -442,7 +446,7 @@ template {
   color: #333333;
 }
 
-.search__button {
+.search_button {
   position: absolute;
   top: 0;
   right: 0;
@@ -1400,7 +1404,7 @@ template {
   }
   .navbar-top {
     padding-top: 30px;
-    padding-bottom: 30px;
+    padding-bottom: 31px;
   }
   .navbar__search {
     margin-left: auto;
@@ -1414,7 +1418,7 @@ template {
     line-height: 15px;
   }
   .search__input {
-    width: 340px;
+    max-width: 340px;
   }
   .hotel {
     padding-bottom: 60px;
@@ -1524,8 +1528,57 @@ template {
     max-width: 576px;
     width: 92%;
   }
-  .navbar__search, .navbar-menu, .navbar__user {
+  .body {
+    padding-top: 78px;
+  }
+  .navbar--mobile_fixed {
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    z-index: 99;
+  }
+  .navbar__search--mobile_hidden, .navbar__user--mobile_hidden {
     display: none;
+  }
+  .navbar__search--mobile_visible, .navbar__user--mobile_visible {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .navbar__user {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .navbar-bottom {
+    display: none;
+    position: fixed;
+    padding-top: 30px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 78px;
+  }
+  .navbar-bottom--visible {
+    display: block;
+    overflow: auto;
+  }
+  .navbar-menu {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .navbar-menu__item {
+    margin-bottom: 20px;
+  }
+  .navbar-menu__item--mobile_visible {
+    display: block;
   }
   .menu-button {
     display: -webkit-box;
@@ -1554,6 +1607,11 @@ template {
     height: 1px;
     background-color: #333333;
   }
+  .user__name {
+    color: #fff;
+    margin-left: 0;
+    margin-bottom: 10px;
+  }
   .stars {
     -ms-flex-preferred-size: auto;
         flex-basis: auto;
@@ -1566,6 +1624,9 @@ template {
   .hotel-name {
     -ms-flex-preferred-size: 100%;
         flex-basis: 100%;
+  }
+  .hotel-info {
+    padding-top: 18px;
   }
   .hotel-info__text {
     width: 100%;
@@ -1693,6 +1754,9 @@ template {
   }
   .card {
     width: 100%;
+  }
+  .navbar-menu__item {
+    max-width: 245px;
   }
   .footer {
     padding: 69px 0 21px 0;

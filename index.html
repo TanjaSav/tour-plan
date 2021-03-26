@@ -13,40 +13,31 @@
   <link rel="stylesheet" href="css/style.css"/>
 </head>
 <body>
-  <header class="navbar">
+  <header class="navbar navbar--mobile_fixed">
     <div class="container">
       <div class="navbar-top">
         <a href="#" class="logo">
-          <img 
-          src="image\horizontal-logo.svg" 
-          alt="logo: Best Tour Plan" 
-          class="logo__image">
+          <img src="image\horizontal-logo.svg" alt="logo: Best Tour Plan" class="logo__image">
         </a>
-
-        <form action="#" class="search navbar__search">
-          <input 
-            type="text" 
-            class="search__input"
-            placeholder="Search Location"
-            />
-          <button class="search__button">
+        <form action="#" class="search navbar__search navbar__search--mobile_hidden">
+          <input type="text" class="search__input" placeholder="Search Location"/>
+          <button class="search_button">
             <img src="image\search.svg" alt="Icon: search"/>
           </button>
         </form>
+        <!-- /.navbar__search -->
 
-        <a href="#" class="user navbar__user">
-          <img 
-            src="image\user-avatar.jpg" alt="Avatar: Nathan" 
-            class="user__avatar"
-          />
+        <a href="#" class="user navbar__user navbar__user--mobile_hidden">
+          <img src="image\user-avatar.jpg" alt="Avatar: Nathan" class="user__avatar"/>
           <span class="user__name">Nathan</span>
         </a>
-        <!--/.user-->
+        <!--/.navbar__uuser-->
         <button class="menu-button navbar-top__menu-button">
           <span class="menu-button__line"></span>
           <span class="menu-button__line"></span>
           <span class="menu-button__line"></span>
         </button>
+        <!-- /.menu-button navbar-top__menu-button -->
       </div>
       <!--/.navbar-top-->
     </div>
@@ -54,6 +45,22 @@
     <div class="navbar-bottom">
       <div class="container">
         <ul class="navbar-menu">
+          <li class="navbar-menu__item navbar-menu__item--mobile_visible">
+            <a href="#" class="user navbar__user navbar__user--mobile_visible">
+              <img src="image/user-avatar.jpg" alt="Avatar: Nathan" class="user__avatar">
+              <span class="user__name user__name--light">Nathan</span>
+            </a>
+            <!-- /.navbar__user -->
+          </li>
+          <li class="navbar-menu__item navbar-menu__item--mobile_visible">
+            <form action="#" class="search navbar__search navbar__search--mobile_visible">
+              <input type="text" class="search__input" placeholder="Search Location">
+              <button class="search__button">
+                <img src="image/search.svg" alt="Icon: search">
+              </button>
+            </form>
+            <!-- /.navbar__search -->
+          </li>
           <li class="navbar-menu__item">
             <a href="#" class="navbar-menu__link">All Deals</a>
           </li>
@@ -132,33 +139,19 @@
             <div class="swiper-wrapper">
               <div class="swiper-slide hotel-slider__item">
                 <img 
-                class="hotel-slider__image" 
-                src="image/slide.jpg" 
-                alt="slide"/>
+                class="hotel-slider__image" src="image/slide.jpg" alt="slide"/>
               </div>
               <div class="swiper-slide hotel-slider__item">
-                <img 
-                class="hotel-slider__image" 
-                src="image/slide-2.jpg" 
-                alt="slide"/>
+                <img class="hotel-slider__image" src="image/slide-2.jpg" alt="slide"/>
               </div>
               <div class="swiper-slide hotel-slider__item">
-                <img 
-                class="hotel-slider__image" 
-                src="image/slide-3.jpg" 
-                alt="slide"/>
+                <img class="hotel-slider__image" src="image/slide-3.jpg" alt="slide"/>
               </div>
               <div class="swiper-slide hotel-slider__item">
-                <img 
-                class="hotel-slider__image" 
-                src="image/slide-4.jpg" 
-                alt="slide" />
+                <img class="hotel-slider__image" src="image/slide-4.jpg" alt="slide"/>
               </div>
               <div class="swiper-slide hotel-slider__item">
-                <img 
-                class="hotel-slider__image" 
-                src="image/slide-5.jpg" 
-                alt="slide" />
+                <img class="hotel-slider__image" src="image/slide-5.jpg" alt="slide"/>
               </div>
             </div>
             <!-- /.swiper-wrapper -->
@@ -201,8 +194,7 @@
           </div>
           <!--/.booking-->
           <div class="map">
-            <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15810.165176046881!2d98.29046490971564!3d7.838273566972379!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x305025650c33dbab%3A0xa67a542329d011e1!2sHilton%20Phuket%20Arcadia%20Resort%20%26%20Spa!5e0!3m2!1sen!2sis!4v1615863649442!5m2!1sen!2sis"
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15810.165176046881!2d98.29046490971564!3d7.838273566972379!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x305025650c33dbab%3A0xa67a542329d011e1!2sHilton%20Phuket%20Arcadia%20Resort%20%26%20Spa!5e0!3m2!1sen!2sis!4v1615863649442!5m2!1sen!2sis"
               width="100%" height="213px" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
           </div>
           <!-- /.map -->
@@ -215,18 +207,11 @@
   </section>
   <section class="newsletter">
     <div class="newsletter-wrapper">
-      <h2 class="newsletter-title newsletter__title">
-        subscribe to our
-        <span class="newsletter-title__strong">
-          Newsletter
-        </span>
+      <h2 class="newsletter-title newsletter__title"> subscribe to our
+        <span class="newsletter-title__strong">Newsletter</span>
       </h2>
       <form action="#" class="subscribe newsletter__subscribe">
-        <input 
-        type="text" 
-        class="subscribe__input" 
-        placeholder="Your email address" 
-        />
+        <input type="text" class="subscribe__input" placeholder="Your email address"/>
         <button class="subscribe__button">Send</button>
       </form>
     </div>
