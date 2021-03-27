@@ -21,7 +21,7 @@
         </a>
         <form action="#" class="search navbar__search navbar__search--mobile_hidden">
           <input type="text" class="search__input" placeholder="Search Location"/>
-          <button class="search_button">
+          <button class="search__button">
             <img src="image\search.svg" alt="Icon: search"/>
           </button>
         </form>
@@ -505,18 +505,24 @@
         <!-- /.footer__contact-details -->
         <div class="footer__contact-form ">
           <h3 class="footer__title footer__title--mb-3">Send us a message</h3>
-          <form action="#" class="footer__form">
+          <form action="send.php" method="POST" class="footer__form">
             <input 
               type="text" 
               class="input footer__input" 
               placeholder="Your Full Name*" 
+              name="name"
             />
             <input 
               type="text" 
               class="input footer__input" 
-              placeholder="Phone Number*" 
+              placeholder="Phone Number*"
+              name="phone" 
             />
-            <textarea class="footer__message" placeholder="Message"></textarea>
+            <textarea 
+              class="footer__message" 
+              placeholder="Message" 
+              name="message"
+            ></textarea>
             <button class="button footer__button" type="submit">Send</button>
             <span class="footer__info">* Required Fields</span>
           </form>

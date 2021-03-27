@@ -446,7 +446,7 @@ template {
   color: #333333;
 }
 
-.search_button {
+.search__button {
   position: absolute;
   top: 0;
   right: 0;
@@ -1528,8 +1528,11 @@ template {
     max-width: 576px;
     width: 92%;
   }
-  .body {
+  body {
     padding-top: 78px;
+  }
+  .mobile-open {
+    overflow: hidden;
   }
   .navbar--mobile_fixed {
     position: fixed;
@@ -1624,9 +1627,6 @@ template {
   .hotel-name {
     -ms-flex-preferred-size: 100%;
         flex-basis: 100%;
-  }
-  .hotel-info {
-    padding-top: 18px;
   }
   .hotel-info__text {
     width: 100%;
